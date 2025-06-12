@@ -65,3 +65,15 @@ if (areAuthorsAdults) {
 
 console.log(authors);
 console.log('Tutti maggiorenni?', areAuthorsAdults);
+
+// Array che contiene le età degli autori dei libri
+const ages = authors.map(author => author.age);
+
+// Somma delle età
+const agesSum = ages.reduce((sum, age) => sum + age, 0);
+
+// Età media
+const averageAge = agesSum / ages.length;
+
+console.log('Età degli autori:', ages);
+console.log('Età media:', averageAge);
